@@ -1,0 +1,15 @@
+$ ...
+... feat(infos): ajout du local
+... feat(infos): horaire des reunions
+... feat(adresses): ajout d'Amel
+... feat(adresses): ajout de Tom
+... feat(adresses): ajout de Sarah
+$ ...
+... feat(infos): ajout du local
+... feat(infos): horaire des reunions
+$ ...
+* ... feat(infos): ajout du local
+* ... feat(infos): horaire des reunions
+* ... feat(adresses): ajout d'Amel
+* ... feat(adresses): ajout de Tom
+* ... feat(adresses): ajout de Sarah

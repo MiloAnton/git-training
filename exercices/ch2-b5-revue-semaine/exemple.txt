@@ -1,0 +1,66 @@
+$ printf "lundi : mise en route\nmercredi : premiers essais\nvendredi : revue de la semaine\n" > avancement.txt
+$ git add avancement.txt
+$ git diff
+$ git diff --staged
+diff --git a/avancement.txt b/avancement.txt
+index ... 100644
+--- a/avancement.txt
++++ b/avancement.txt
+@@ -1,2 +1,3 @@
+ lundi : mise en route
+ mercredi : premiers essais
++vendredi : revue de la semaine
+$ git commit -m "feat(avancement): point du vendredi"
+[main ...] feat(avancement): point du vendredi
+ 1 file changed, 1 insertion(+)
+$ git log --oneline --graph
+* ... feat(avancement): point du vendredi
+* ... feat(avancement): point du mercredi
+* ... feat(objectifs): objectif du trimestre
+* ... feat(avancement): point du lundi
+$ git log --stat -n 3
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:45:00 2026 +0100
+
+    feat(avancement): point du vendredi
+
+ avancement.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:10:00 2026 +0100
+
+    feat(avancement): point du mercredi
+
+ avancement.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 09:56:00 2026 +0100
+
+    feat(objectifs): objectif du trimestre
+
+ objectifs.txt | 1 +
+ 1 file changed, 1 insertion(+)
+$ git diff HEAD~3 HEAD
+diff --git a/avancement.txt b/avancement.txt
+index ... 100644
+--- a/avancement.txt
++++ b/avancement.txt
+@@ -1 +1,3 @@
+ lundi : mise en route
++mercredi : premiers essais
++vendredi : revue de la semaine
+diff --git a/objectifs.txt b/objectifs.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/objectifs.txt
+@@ -0,0 +1 @@
++Objectif : livrer la version 1
+$ git diff HEAD~3 HEAD --name-only
+avancement.txt
+objectifs.txt

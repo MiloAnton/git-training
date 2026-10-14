@@ -1,0 +1,58 @@
+$ git switch main
+Already on 'main'
+$ git diff --stat main feature/salles
+ presentation.txt | 1 -
+ salles.txt       | 2 ++
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+$ git merge --no-ff feature/salles
+Merge made by the 'ort' strategy.
+ salles.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 salles.txt
+$ git show HEAD --stat
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:20:00 2026 +0100
+
+    Merge branch 'feature/salles'
+
+ salles.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+$ git log --oneline --all
+... Merge branch 'feature/salles'
+... feat(presentation): ouverture 7j/7
+... feat(tarifs): grille tarifaire
+... feat(salles): deux salles
+... feat(presentation): l'espace
+$ git diff --stat main feature/tarifs
+ presentation.txt | 1 -
+ salles.txt       | 2 --
+ tarifs.txt       | 2 ++
+ 3 files changed, 2 insertions(+), 3 deletions(-)
+$ git merge --no-ff feature/tarifs
+Merge made by the 'ort' strategy.
+ tarifs.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 tarifs.txt
+$ git show HEAD --stat
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:48:00 2026 +0100
+
+    Merge branch 'feature/tarifs'
+
+ tarifs.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+$ git branch -d feature/salles
+Deleted branch feature/salles (was ...).
+$ git branch -d feature/tarifs
+Deleted branch feature/tarifs (was ...).
+$ git log --oneline --all
+... Merge branch 'feature/tarifs'
+... Merge branch 'feature/salles'
+... feat(presentation): ouverture 7j/7
+... feat(tarifs): grille tarifaire
+... feat(salles): deux salles
+... feat(presentation): l'espace

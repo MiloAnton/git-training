@@ -1,0 +1,63 @@
+$ git switch -c feature/visites
+Switched to a new branch 'feature/visites'
+$ printf "Visite 1 : la basse-cour\n" > visites.txt
+$ git add visites.txt
+$ git commit -m "feat(visites): visite de la basse-cour"
+[feature/visites ...] feat(visites): visite de la basse-cour
+ 1 file changed, 1 insertion(+)
+ create mode 100644 visites.txt
+$ printf "Visite 1 : la basse-cour\nVisite 2 : la bergerie\n" > visites.txt
+$ git commit -am "feat(visites): visite de la bergerie"
+[feature/visites ...] feat(visites): visite de la bergerie
+ 1 file changed, 1 insertion(+)
+$ git switch main
+Switched to branch 'main'
+$ git switch -c brouillon-ateliers
+Switched to a new branch 'brouillon-ateliers'
+$ printf "Atelier pain\n" > ateliers.txt
+$ git add ateliers.txt
+$ git commit -m "feat(ateliers): atelier pain"
+[brouillon-ateliers ...] feat(ateliers): atelier pain
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ateliers.txt
+$ git branch -m feature/ateliers
+$ git switch main
+Switched to branch 'main'
+$ printf "Ferme ouverte du mardi au dimanche\n" > horaires.txt
+$ git add horaires.txt
+$ git commit -m "feat(horaires): jours d'ouverture"
+[main ...] feat(horaires): jours d'ouverture
+ 1 file changed, 1 insertion(+)
+ create mode 100644 horaires.txt
+$ git switch feature/visites
+Switched to branch 'feature/visites'
+$ printf "Visite 1 : la basse-cour\nVisite 2 : la bergerie\nVisite 3 : le potager\n" > visites.txt
+$ git stash
+Saved working directory and index state WIP on feature/visites: ... feat(visites): visite de la bergerie
+$ git switch main
+Switched to branch 'main'
+$ git switch feature/visites
+Switched to branch 'feature/visites'
+$ git stash pop
+On branch feature/visites
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   visites.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ git commit -am "feat(visites): visite du potager"
+[feature/visites ...] feat(visites): visite du potager
+ 1 file changed, 1 insertion(+)
+$ git branch -v
+  feature/ateliers ... feat(ateliers): atelier pain
+* feature/visites  ... feat(visites): visite du potager
+  main             ... feat(horaires): jours d'ouverture
+$ git log --oneline --all
+... feat(visites): visite du potager
+... feat(horaires): jours d'ouverture
+... feat(ateliers): atelier pain
+... feat(visites): visite de la bergerie
+... feat(visites): visite de la basse-cour
+... feat(presentation): la ferme

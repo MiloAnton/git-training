@@ -1,0 +1,10 @@
+$ git switch main
+Already on 'main'
+$ git merge fix/titre
+Updating ...
+Fast-forward
+ une.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git log --oneline --graph
+* ... fix(une): correction du titre
+* ... feat(une): premiere une

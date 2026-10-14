@@ -1,0 +1,18 @@
+$ git log --oneline
+... fix(checklist): precision sur les gouvernes
+... feat(checklist): ajout du controle carburant
+... feat(checklist): version de janvier
+$ git diff HEAD~2 HEAD
+diff --git a/checklist.txt b/checklist.txt
+index ... 100644
+--- a/checklist.txt
++++ b/checklist.txt
+@@ -1,3 +1,4 @@
+ 1. Verifier le niveau d'huile
+-2. Controler les gouvernes
++2. Controler les gouvernes et les volets
+ 3. Tester la radio
++4. Verifier le carburant
+$ git diff --stat HEAD~2 HEAD
+ checklist.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)

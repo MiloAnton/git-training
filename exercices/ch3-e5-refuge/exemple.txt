@@ -1,0 +1,7 @@
+$ git branch
+  fix/tarifs
+* main
+$ git branch -d fix/tarifs
+Deleted branch fix/tarifs (was ...).
+$ git branch
+* main

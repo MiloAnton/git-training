@@ -1,0 +1,11 @@
+$ git branch
+  feature/serre
+* main
+$ git branch -v
+  feature/serre ... feat(serre): plan de la serre
+* main          ... feat(parcelles): ajout des haricots
+$ git switch feature/serre
+Switched to branch 'feature/serre'
+$ ls
+parcelles.txt
+serre.txt

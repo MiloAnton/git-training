@@ -1,0 +1,41 @@
+$ printf "mardi : fractionne\njeudi : endurance\n" > planning.txt
+$ printf "12 plots\n4 chronos\n" > materiel.txt
+$ printf "demander une augmentation au président\n" > brouillon-perso.txt
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	brouillon-perso.txt
+	materiel.txt
+	planning.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add planning.txt
+$ git commit -m "feat(planning): ajout des séances de la semaine"
+[main (root-commit) ...] feat(planning): ajout des séances de la semaine
+ 1 file changed, 2 insertions(+)
+ create mode 100644 planning.txt
+$ git add materiel.txt
+$ git commit -m "feat(materiel): ajout du matériel du club"
+[main ...] feat(materiel): ajout du matériel du club
+ 1 file changed, 2 insertions(+)
+ create mode 100644 materiel.txt
+$ printf "brouillon-perso.txt\n" > .gitignore
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add .gitignore
+$ git commit -m "config(depot): exclusion du brouillon personnel"
+[main ...] config(depot): exclusion du brouillon personnel
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+$ git status
+On branch main
+nothing to commit, working tree clean

@@ -1,0 +1,26 @@
+{
+  "1": {
+    "indices": "LEONIS-GIT-IND-7421",
+    "corrections": "LEONIS-GIT-COR-5839"
+  },
+  "2": {
+    "indices": "LEONIS-GIT-IND-3064",
+    "corrections": "LEONIS-GIT-COR-8217"
+  },
+  "3": {
+    "indices": "LEONIS-GIT-IND-5192",
+    "corrections": "LEONIS-GIT-COR-7406"
+  },
+  "4": {
+    "indices": "LEONIS-GIT-IND-8635",
+    "corrections": "LEONIS-GIT-COR-2971"
+  },
+  "5": {
+    "indices": "LEONIS-GIT-IND-4028",
+    "corrections": "LEONIS-GIT-COR-6513"
+  },
+  "6": {
+    "indices": "LEONIS-GIT-IND-9347",
+    "corrections": "LEONIS-GIT-COR-1860"
+  }
+}

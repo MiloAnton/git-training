@@ -1,0 +1,52 @@
+$ ...
+$ ...
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   export.tmp
+	new file:   inventaire.txt
+	new file:   photos/catan.jpg
+$ ...
+$ ...
+$ ...
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   inventaire.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	export.tmp
+	photos/
+$ ...
+$ ...
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   inventaire.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+$ ...
+$ ...
+[main (root-commit) ...] config(depot): inventaire et exclusion des fichiers temporaires
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 inventaire.txt
+$ ...
+On branch main
+nothing to commit, working tree clean
+$ ...
+export.tmp
+inventaire.txt
+photos

@@ -1,0 +1,25 @@
+$ ...
+Already on 'main'
+$ ...
+Updating ...
+Fast-forward
+ burger.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 burger.txt
+$ ...
+Merge made by the 'ort' strategy.
+ dessert.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dessert.txt
+$ ...
+Merge made by the 'ort' strategy.
+ boissons.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 boissons.txt
+$ ...
+... Merge branch 'feature/boissons'
+... Merge branch 'feature/dessert'
+... feat(boissons): limonade
+... feat(dessert): tarte citron
+... feat(burger): burger du jour
+... feat(carte): ouverture

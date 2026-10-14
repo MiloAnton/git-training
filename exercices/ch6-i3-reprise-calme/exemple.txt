@@ -1,0 +1,21 @@
+$ git merge feature/adresse
+Auto-merging contact.txt
+CONFLICT (content): Merge conflict in contact.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git merge --abort
+$ git status
+On branch main
+nothing to commit, working tree clean
+$ git merge feature/adresse
+Auto-merging contact.txt
+CONFLICT (content): Merge conflict in contact.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git restore --ours -- contact.txt
+$ git add contact.txt
+$ git commit -m "fix(contact): resolution du conflit d'adresse"
+[main ...] fix(contact): resolution du conflit d'adresse
+$ git log --oneline --all
+... fix(contact): resolution du conflit d'adresse
+... feat(contact): adresse place du Marche
+... feat(contact): adresse rue des Lilas
+... feat(contact): fiche de contact

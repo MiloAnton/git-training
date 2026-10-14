@@ -1,0 +1,42 @@
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ git push
+To https://github.com/leonis-formation/depot-club.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/leonis-formation/depot-club.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+$ git pull --no-edit
+From https://github.com/leonis-formation/depot-club.git
+   ...  main       -> origin/main
+Merge made by the 'ort' strategy.
+ avis.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 avis.txt
+$ ls
+avis.txt
+ouvrages.txt
+$ cat ouvrages.txt
+L'Etranger
+Le Mythe de Sisyphe
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ git push
+To https://github.com/leonis-formation/depot-club.git
+   ...  main -> main
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean

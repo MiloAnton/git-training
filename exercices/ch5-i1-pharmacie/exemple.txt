@@ -1,0 +1,25 @@
+$ git log --oneline
+... feat(planning): garde du week-end
+... feat(planning): garde du jeudi
+... feat(planning): garde du lundi
+$ git reset --soft HEAD~1
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   planning.txt
+$ git reset HEAD~1
+Unstaged changes after reset:
+M	planning.txt
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   planning.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ cat planning.txt
+Garde : nuit du lundi
+Garde : nuit du jeudi
+Garde : week-end

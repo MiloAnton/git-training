@@ -1,0 +1,34 @@
+$ git log --oneline
+... feat(registre): intervention du 22 janvier
+... feat(registre): intervention du 15 janvier
+... feat(registre): intervention du 8 janvier
+... feat(registre): intervention du 1er janvier
+$ git show HEAD~2
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 09:49:00 2026 +0100
+
+    feat(registre): intervention du 8 janvier
+
+diff --git a/registre.txt b/registre.txt
+index ... 100644
+--- a/registre.txt
++++ b/registre.txt
+@@ -1 +1,2 @@
+ 01/01 : remplacement du filtre
++08/01 : purge des radiateurs
+$ git show HEAD~1
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:03:00 2026 +0100
+
+    feat(registre): intervention du 15 janvier
+
+diff --git a/registre.txt b/registre.txt
+index ... 100644
+--- a/registre.txt
++++ b/registre.txt
+@@ -1,2 +1,3 @@
+ 01/01 : remplacement du filtre
+ 08/01 : purge des radiateurs
++15/01 : controle electrique

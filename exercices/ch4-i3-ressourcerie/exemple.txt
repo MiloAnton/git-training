@@ -1,0 +1,41 @@
+$ git switch main
+Already on 'main'
+$ git diff main feature/collecte
+diff --git a/collecte.txt b/collecte.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/collecte.txt
+@@ -0,0 +1 @@
++Collecte : mardi et samedi
+diff --git a/presentation.txt b/presentation.txt
+index ... 100644
+--- a/presentation.txt
++++ b/presentation.txt
+@@ -1,2 +1 @@
+ Ressourcerie du Pont
+-Ouverte a tous
+$ git diff --stat main feature/collecte
+ collecte.txt     | 1 +
+ presentation.txt | 1 -
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+$ git merge --no-ff feature/collecte
+Merge made by the 'ort' strategy.
+ collecte.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 collecte.txt
+$ git show HEAD --stat
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:52:00 2026 +0100
+
+    Merge branch 'feature/collecte'
+
+ collecte.txt | 1 +
+ 1 file changed, 1 insertion(+)
+$ git log --oneline --all
+... Merge branch 'feature/collecte'
+... feat(presentation): precision
+... feat(collecte): jours de collecte
+... feat(presentation): la ressourcerie

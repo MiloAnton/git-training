@@ -1,0 +1,13 @@
+$ git log --oneline
+... feat(materiel): ajout des rallonges
+... feat(planning): creneau du mardi
+... feat(materiel): inventaire initial
+... feat(planning): creneau du lundi
+$ git log --oneline -- planning.txt
+... feat(planning): creneau du mardi
+... feat(planning): creneau du lundi
+$ git log --oneline --graph --all
+* ... feat(materiel): ajout des rallonges
+* ... feat(planning): creneau du mardi
+* ... feat(materiel): inventaire initial
+* ... feat(planning): creneau du lundi

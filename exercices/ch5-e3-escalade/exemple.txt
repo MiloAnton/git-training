@@ -1,0 +1,9 @@
+$ cat voies.txt
+n importe quoi
+$ git restore voies.txt
+$ cat voies.txt
+Voie bleue : 5a
+Voie rouge : 6b
+$ git status
+On branch main
+nothing to commit, working tree clean

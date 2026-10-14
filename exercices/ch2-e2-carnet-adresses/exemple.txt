@@ -1,0 +1,15 @@
+$ git log --oneline
+... feat(infos): ajout du local
+... feat(infos): horaire des reunions
+... feat(adresses): ajout d'Amel
+... feat(adresses): ajout de Tom
+... feat(adresses): ajout de Sarah
+$ git log --oneline -n 2
+... feat(infos): ajout du local
+... feat(infos): horaire des reunions
+$ git log --oneline --graph
+* ... feat(infos): ajout du local
+* ... feat(infos): horaire des reunions
+* ... feat(adresses): ajout d'Amel
+* ... feat(adresses): ajout de Tom
+* ... feat(adresses): ajout de Sarah

@@ -1,0 +1,20 @@
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   horaires.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff --name-only --diff-filter=U
+horaires.txt
+$ cat horaires.txt
+Ouverture : 9h
+<<<<<<< HEAD
+Fermeture : 18h
+=======
+Fermeture : 20h
+>>>>>>> feature/soir

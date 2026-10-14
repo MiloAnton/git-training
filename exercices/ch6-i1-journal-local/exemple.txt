@@ -1,0 +1,33 @@
+$ git merge feature/edito
+Auto-merging une.txt
+CONFLICT (content): Merge conflict in une.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   une.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff --name-only --diff-filter=U
+une.txt
+$ cat une.txt
+<<<<<<< HEAD
+Une : la piscine rouvre
+=======
+Une : le marche renait
+>>>>>>> feature/edito
+Pages : 12
+$ git restore --ours -- une.txt
+$ git add une.txt
+$ git commit -m "fix(une): resolution du conflit sur le titre"
+[main ...] fix(une): resolution du conflit sur le titre
+$ git log --oneline --all
+... fix(une): resolution du conflit sur le titre
+... feat(une): titre sur la piscine
+... feat(une): titre sur le marche
+... feat(une): maquette

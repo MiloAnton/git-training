@@ -1,0 +1,36 @@
+$ ...
+$ ...
+$ ...
+$ ...
+diff --git a/description.txt b/description.txt
+index ... 100644
+--- a/description.txt
++++ b/description.txt
+@@ -1 +1,2 @@
+ Capacite : 6 tasses
++Matiere : aluminium
+$ ...
+diff --git a/fiche.txt b/fiche.txt
+index ... 100644
+--- a/fiche.txt
++++ b/fiche.txt
+@@ -1,2 +1,2 @@
+ Cafetiere italienne
+-Prix : 24 euros
++Prix : 29 euros
+$ ...
+diff --git a/description.txt b/description.txt
+index ... 100644
+--- a/description.txt
++++ b/description.txt
+@@ -1 +1,2 @@
+ Capacite : 6 tasses
++Matiere : aluminium
+diff --git a/fiche.txt b/fiche.txt
+index ... 100644
+--- a/fiche.txt
++++ b/fiche.txt
+@@ -1,2 +1,2 @@
+ Cafetiere italienne
+-Prix : 24 euros
++Prix : 29 euros

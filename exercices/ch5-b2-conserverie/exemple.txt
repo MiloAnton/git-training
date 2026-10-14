@@ -1,0 +1,28 @@
+$ git log --oneline
+... feat(bocaux): stock de 1 litre
+... feat(bocaux): stock de 500 ml
+$ git reset --soft HEAD~1
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   bocaux.txt
+$ cat bocaux.txt
+Bocaux 500 ml : 200
+Bocaux 1 l : 120
+$ git reflog
+... HEAD@{0}: reset: moving to HEAD~1
+... HEAD@{1}: commit: feat(bocaux): stock de 1 litre
+... HEAD@{2}: commit (initial): feat(bocaux): stock de 500 ml
+$ git reset --hard HEAD@{1}
+HEAD is now at ... feat(bocaux): stock de 1 litre
+$ git log --oneline
+... feat(bocaux): stock de 1 litre
+... feat(bocaux): stock de 500 ml
+$ git reset --hard HEAD~1
+HEAD is now at ... feat(bocaux): stock de 500 ml
+$ git status
+On branch main
+nothing to commit, working tree clean
+$ cat bocaux.txt
+Bocaux 500 ml : 200

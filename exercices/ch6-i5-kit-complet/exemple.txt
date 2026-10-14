@@ -1,0 +1,33 @@
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   regles.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff --name-only --diff-filter=U
+regles.txt
+$ cat regles.txt
+<<<<<<< HEAD
+Nombre de joueurs : 11
+=======
+Nombre de joueurs : 7
+>>>>>>> feature/club
+Duree : 90 min
+$ git log --oneline --all
+... feat(regles): onze joueurs
+... feat(regles): sept joueurs
+... feat(regles): premieres regles
+$ git restore --theirs -- regles.txt
+$ git add regles.txt
+$ git commit -m "fix(regles): resolution, on garde la version du club"
+[main ...] fix(regles): resolution, on garde la version du club
+$ git log --oneline --all
+... fix(regles): resolution, on garde la version du club
+... feat(regles): onze joueurs
+... feat(regles): sept joueurs
+... feat(regles): premieres regles

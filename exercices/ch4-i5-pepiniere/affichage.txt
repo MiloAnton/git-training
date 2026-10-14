@@ -1,0 +1,24 @@
+$ ...
+Already on 'main'
+$ ...
+Merge made by the 'ort' strategy.
+ semis.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 semis.txt
+$ ...
+Merge made by the 'ort' strategy.
+ greffes.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greffes.txt
+$ ...
+Deleted branch feature/semis (was ...).
+$ ...
+Deleted branch feature/greffes (was ...).
+$ ...
+* main
+$ ...
+... Merge branch 'feature/greffes'
+... Merge branch 'feature/semis'
+... feat(greffes): calendrier des greffes
+... feat(semis): calendrier des semis
+... feat(presentation): la pepiniere

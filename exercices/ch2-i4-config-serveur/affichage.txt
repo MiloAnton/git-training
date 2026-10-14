@@ -1,0 +1,22 @@
+$ ...
+... fix(config): passage en debug
+... feat(config): configuration initiale
+$ ...
+port = 8080
+mode = production
+timeout = 30
+$ ...
+port = 8080
+mode = debug
+timeout = 3000
+$ ...
+diff --git a/config.txt b/config.txt
+index ... 100644
+--- a/config.txt
++++ b/config.txt
+@@ -1,3 +1,3 @@
+ port = 8080
+-mode = production
+-timeout = 30
++mode = debug
++timeout = 3000

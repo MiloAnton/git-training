@@ -1,0 +1,49 @@
+$ ...
+Already on 'main'
+$ ...
+Updating ...
+Fast-forward
+ presentation.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ ...
+Merge made by the 'ort' strategy.
+ scene.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 scene.txt
+$ ...
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint: 
+hint: 	git merge --no-ff
+hint: 
+hint: or:
+hint: 
+hint: 	git rebase
+hint: 
+hint: Disable this message with "git config advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+$ ...
+Merge made by the 'ort' strategy.
+ buvette.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 buvette.txt
+$ ...
+Deleted branch fix/typo (was ...).
+$ ...
+Deleted branch feature/scene (was ...).
+$ ...
+Deleted branch feature/buvette (was ...).
+$ ...
+error: the branch 'abandonnee' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D abandonnee'
+$ ...
+  abandonnee
+* main
+$ ...
+... Merge branch 'feature/buvette'
+... Merge branch 'feature/scene'
+... feat(idee): piste non retenue
+... feat(buvette): points de vente
+... feat(scene): seconde scene
+... feat(scene): capacite
+... fix(presentation): precision sur la duree
+... feat(presentation): le festival

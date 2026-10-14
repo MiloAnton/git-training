@@ -1,0 +1,22 @@
+$ ...
+... style(fr): precision sur l'aide
+... feat(fr): relecture et ajout de l'aide
+... feat(en): fichier anglais
+... feat(fr): premieres chaines
+$ ...
+diff --git a/fr.txt b/fr.txt
+index ... 100644
+--- a/fr.txt
++++ b/fr.txt
+@@ -1,2 +1,3 @@
+-accueil = Bienvenue
+-quitter = Sortir
++accueil = Bienvenue chez vous
++quitter = Quitter
++aide = Aide
+$ ...
+accueil = Bienvenue
+quitter = Sortir
+$ ...
+ fr.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)

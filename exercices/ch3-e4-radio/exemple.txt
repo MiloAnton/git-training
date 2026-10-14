@@ -1,0 +1,23 @@
+$ printf "6h Reveil\n9h Chronique\n12h Journal\n" > grille.txt
+$ git stash
+Saved working directory and index state WIP on feature/grille: ... feat(grille): premiere grille
+$ git status
+On branch feature/grille
+nothing to commit, working tree clean
+$ git switch main
+Switched to branch 'main'
+$ git switch feature/grille
+Switched to branch 'feature/grille'
+$ git stash pop
+On branch feature/grille
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   grille.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ cat grille.txt
+6h Reveil
+9h Chronique
+12h Journal

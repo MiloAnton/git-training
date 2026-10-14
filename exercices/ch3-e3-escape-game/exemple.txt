@@ -1,0 +1,9 @@
+$ git switch enigmes
+Switched to branch 'enigmes'
+$ git branch -v
+* enigmes ... feat(enigmes): enigme du cadran
+  main    ... feat(salles): premiere salle
+$ git branch -m feature/enigmes
+$ git branch -v
+* feature/enigmes ... feat(enigmes): enigme du cadran
+  main            ... feat(salles): premiere salle

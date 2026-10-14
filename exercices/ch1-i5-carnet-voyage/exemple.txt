@@ -1,0 +1,19 @@
+$ echo "Jour 3 : Lisbonne, tramway 28" >> etapes.txt
+$ git add etapes.txt
+$ git commit -m "feat(etapes): ajout de l'étape de Lisbonne"
+[main ...] feat(etapes): ajout de l'étape de Lisbonne
+ 1 file changed, 1 insertion(+)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ git push
+To https://github.com/leonis-formation/depot-voyage.git
+   ...  main -> main
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean

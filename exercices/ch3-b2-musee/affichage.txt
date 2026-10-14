@@ -1,0 +1,20 @@
+$ ...
+  jamais-fini ... feat(suspens): piste non terminee
+* main        ... feat(salles): salle moderne
+  truc        ... feat(audioguide): version francaise
+  vieux-test  ... feat(salles): salle moderne
+$ ...
+... feat(suspens): piste non terminee
+... feat(salles): salle moderne
+... feat(audioguide): version francaise
+... feat(salles): salle antique
+$ ...
+$ ...
+Deleted branch vieux-test (was ...).
+$ ...
+error: the branch 'jamais-fini' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D jamais-fini'
+$ ...
+  feature/audioguide ... feat(audioguide): version francaise
+  jamais-fini        ... feat(suspens): piste non terminee
+* main               ... feat(salles): salle moderne

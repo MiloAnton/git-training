@@ -1,0 +1,8 @@
+$ git log --oneline
+... feat(prestations): revision
+$ git reflog
+... HEAD@{0}: reset: moving to HEAD~1
+... HEAD@{1}: commit: feat(prestations): vidange
+... HEAD@{2}: commit (initial): feat(prestations): revision
+$ git log --oneline
+... feat(prestations): revision

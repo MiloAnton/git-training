@@ -1,0 +1,38 @@
+$ ...
+On branch main
+nothing to commit, working tree clean
+$ ...
+rm 'cles-api.txt'
+$ ...
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    cles-api.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cles-api.txt
+$ ...
+$ ...
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    cles-api.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+$ ...
+$ ...
+[main ...] config(depot): retrait des clés du suivi et ajout du gitignore
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ delete mode 100644 cles-api.txt
+$ ...
+On branch main
+nothing to commit, working tree clean
+$ ...
+cles-api.txt
+contacts.txt
+$ ...
+token-prod : abcd1234

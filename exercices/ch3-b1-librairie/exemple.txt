@@ -1,0 +1,42 @@
+$ git switch -c feature/rayons
+Switched to a new branch 'feature/rayons'
+$ printf "Rayon poche\nRayon jeunesse\n" > rayons.txt
+$ git add rayons.txt
+$ git commit -m "feat(rayons): plan des rayons"
+[feature/rayons ...] feat(rayons): plan des rayons
+ 1 file changed, 2 insertions(+)
+ create mode 100644 rayons.txt
+$ git switch main
+Switched to branch 'main'
+$ git switch -c feature/site
+Switched to a new branch 'feature/site'
+$ printf "Page accueil\n" > site.txt
+$ git add site.txt
+$ git commit -m "feat(site): page d'accueil"
+[feature/site ...] feat(site): page d'accueil
+ 1 file changed, 1 insertion(+)
+ create mode 100644 site.txt
+$ printf "Page accueil\nPage contact\n" > site.txt
+$ git stash
+Saved working directory and index state WIP on feature/site: ... feat(site): page d'accueil
+$ git switch main
+Switched to branch 'main'
+$ git switch feature/site
+Switched to branch 'feature/site'
+$ git stash pop
+On branch feature/site
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   site.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ git branch -v
+  feature/rayons ... feat(rayons): plan des rayons
+* feature/site   ... feat(site): page d'accueil
+  main           ... feat(accueil): presentation
+$ git log --oneline --all
+... feat(site): page d'accueil
+... feat(rayons): plan des rayons
+... feat(accueil): presentation

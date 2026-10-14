@@ -1,0 +1,51 @@
+$ ...
+Already on 'main'
+$ ...
+Updating ...
+Fast-forward
+ micros.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 micros.txt
+$ ...
+* ... feat(micros): parc de micros
+* ... feat(presentation): le studio
+$ ...
+Merge made by the 'ort' strategy.
+ cabine.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cabine.txt
+$ ...
+... Merge branch 'feature/cabine'
+... feat(cabine): dimensions
+... feat(micros): parc de micros
+... feat(presentation): le studio
+$ ...
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:13:00 2026 +0100
+
+    Merge branch 'feature/cabine'
+
+ cabine.txt | 1 +
+ 1 file changed, 1 insertion(+)
+$ ...
+diff --git a/cabine.txt b/cabine.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/cabine.txt
+@@ -0,0 +1 @@
++Cabine : 12 m2, traitement acoustique
+diff --git a/micros.txt b/micros.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/micros.txt
+@@ -0,0 +1,2 @@
++Micro statique : 2
++Micro dynamique : 4
+$ ...
+ cabine.txt | 1 +
+ micros.txt | 2 ++
+ 2 files changed, 3 insertions(+)

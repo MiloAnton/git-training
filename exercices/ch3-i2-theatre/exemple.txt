@@ -1,0 +1,27 @@
+$ printf "Hamlet : Lea\nOphelie : Sarah\n" > distribution.txt
+$ printf "demander un rappel de texte a Lea\n" > notes-perso.txt
+$ git stash -u
+Saved working directory and index state WIP on main: ... feat(distribution): premiere distribution
+$ git status
+On branch main
+nothing to commit, working tree clean
+$ ls
+distribution.txt
+$ git stash list
+stash@{0}: WIP on main: ... feat(distribution): premiere distribution
+$ git stash pop
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   distribution.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes-perso.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ ls
+distribution.txt
+notes-perso.txt

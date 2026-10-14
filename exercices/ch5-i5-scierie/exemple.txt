@@ -1,0 +1,24 @@
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   brouillon.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   stock.txt
+$ git restore --staged brouillon.txt
+$ git restore stock.txt
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	brouillon.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ cat stock.txt
+Chene : 12 m3
+Hetre : 8 m3
+$ cat brouillon.txt
+idees en vrac pour la scierie

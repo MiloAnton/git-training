@@ -1,0 +1,69 @@
+$ git log --oneline --graph --all
+* ... feat(seuils): ajout du seuil disque
+* ... fix(seuils): seuils remontes en urgence
+* ... feat(alertes): canal courriel
+* ... feat(seuils): seuils d'alerte initiaux
+$ git log --stat
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:24:00 2026 +0100
+
+    feat(seuils): ajout du seuil disque
+
+ seuils.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 10:10:00 2026 +0100
+
+    fix(seuils): seuils remontes en urgence
+
+ seuils.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 09:56:00 2026 +0100
+
+    feat(alertes): canal courriel
+
+ alertes.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 09:35:00 2026 +0100
+
+    feat(seuils): seuils d'alerte initiaux
+
+ seuils.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+$ git show HEAD~2
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 09:56:00 2026 +0100
+
+    feat(alertes): canal courriel
+
+diff --git a/alertes.txt b/alertes.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/alertes.txt
+@@ -0,0 +1 @@
++Alerte par courriel
+$ git show HEAD~3:seuils.txt
+cpu = 80
+memoire = 75
+$ git diff HEAD~3 HEAD -- seuils.txt
+diff --git a/seuils.txt b/seuils.txt
+index ... 100644
+--- a/seuils.txt
++++ b/seuils.txt
+@@ -1,2 +1,3 @@
+-cpu = 80
+-memoire = 75
++cpu = 99
++memoire = 98
++disque = 95

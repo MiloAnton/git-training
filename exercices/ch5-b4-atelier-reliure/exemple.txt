@@ -1,0 +1,31 @@
+$ git log --oneline
+... feat(techniques): reliure copte
+... feat(techniques): dos carre colle
+... feat(techniques): couture japonaise
+$ git reset --hard HEAD~2
+HEAD is now at ... feat(techniques): couture japonaise
+$ git log --oneline
+... feat(techniques): couture japonaise
+$ cat techniques.txt
+Couture a la japonaise
+$ git reflog
+... HEAD@{0}: reset: moving to HEAD~2
+... HEAD@{1}: commit: feat(techniques): reliure copte
+... HEAD@{2}: commit: feat(techniques): dos carre colle
+... HEAD@{3}: commit (initial): feat(techniques): couture japonaise
+$ git reset --hard HEAD@{1}
+HEAD is now at ... feat(techniques): reliure copte
+$ git log --oneline
+... feat(techniques): reliure copte
+... feat(techniques): dos carre colle
+... feat(techniques): couture japonaise
+$ cat techniques.txt
+Couture a la japonaise
+Dos carre colle
+Reliure copte
+$ git reflog
+... HEAD@{0}: reset: moving to HEAD@{1}
+... HEAD@{1}: reset: moving to HEAD~2
+... HEAD@{2}: commit: feat(techniques): reliure copte
+... HEAD@{3}: commit: feat(techniques): dos carre colle
+... HEAD@{4}: commit (initial): feat(techniques): couture japonaise

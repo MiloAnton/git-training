@@ -1,0 +1,14 @@
+$ git switch -c feature/nouveau-morceau
+Switched to a new branch 'feature/nouveau-morceau'
+$ git branch
+* feature/nouveau-morceau
+  main
+$ printf "Marche de la Saint-Jean\nValse du 14 juillet\nSamba de la kermesse\n" > repertoire.txt
+$ git commit -am "feat(repertoire): ajout de la samba"
+[feature/nouveau-morceau ...] feat(repertoire): ajout de la samba
+ 1 file changed, 1 insertion(+)
+$ git switch main
+Switched to branch 'main'
+$ cat repertoire.txt
+Marche de la Saint-Jean
+Valse du 14 juillet

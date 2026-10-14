@@ -1,0 +1,25 @@
+$ ...
+Already on 'main'
+$ ...
+Updating ...
+Fast-forward
+Squash commit -- not updating HEAD
+ parfums.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 parfums.txt
+$ ...
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   parfums.txt
+$ ...
+[main ...] feat(parfums): gamme complete des parfums
+ 1 file changed, 4 insertions(+)
+ create mode 100644 parfums.txt
+$ ...
+... feat(parfums): gamme complete des parfums
+... wip parfum 4
+... wip parfum 3
+... wip parfum 2
+... wip parfum 1
+... feat(presentation): la savonnerie

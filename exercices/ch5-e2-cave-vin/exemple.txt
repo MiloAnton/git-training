@@ -1,0 +1,13 @@
+$ git log --oneline
+... feat(cave): erreur de saisie
+... feat(cave): stock initial
+$ git revert HEAD --no-edit
+[main ...] Revert "feat(cave): erreur de saisie"
+ Date: Mon Jan 5 10:03:00 2026 +0100
+ 1 file changed, 1 deletion(-)
+$ git log --oneline
+... Revert "feat(cave): erreur de saisie"
+... feat(cave): erreur de saisie
+... feat(cave): stock initial
+$ cat cave.txt
+Bordeaux 2018 : 24 bouteilles

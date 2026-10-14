@@ -1,0 +1,22 @@
+$ git switch main
+Already on 'main'
+$ git merge feature/tournoi
+Updating ...
+Fast-forward
+ tournoi.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tournoi.txt
+$ git log --oneline --all
+... feat(cours): cours debutants
+... feat(tournoi): date du tournoi
+... feat(presentation): le club
+$ git merge --no-ff feature/cours
+Merge made by the 'ort' strategy.
+ cours.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cours.txt
+$ git log --oneline --all
+... Merge branch 'feature/cours'
+... feat(cours): cours debutants
+... feat(tournoi): date du tournoi
+... feat(presentation): le club

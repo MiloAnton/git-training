@@ -1,0 +1,55 @@
+$ git merge feature/saison
+Auto-merging horaires.txt
+CONFLICT (content): Merge conflict in horaires.txt
+Auto-merging tarifs.txt
+CONFLICT (content): Merge conflict in tarifs.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   horaires.txt
+	both modified:   tarifs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff --name-only --diff-filter=U
+horaires.txt
+tarifs.txt
+$ cat tarifs.txt
+<<<<<<< HEAD
+Entree : 6 euros
+=======
+Entree : 7 euros
+>>>>>>> feature/saison
+$ cat horaires.txt
+<<<<<<< HEAD
+Ouverture : 11h
+=======
+Ouverture : 9h
+>>>>>>> feature/saison
+$ git restore --ours -- tarifs.txt
+$ git restore --theirs -- horaires.txt
+$ git add tarifs.txt
+$ git add horaires.txt
+$ git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   horaires.txt
+$ git commit -m "fix(saison): resolution, nos tarifs et leurs horaires"
+[main ...] fix(saison): resolution, nos tarifs et leurs horaires
+$ cat tarifs.txt
+Entree : 6 euros
+$ cat horaires.txt
+Ouverture : 9h
+$ git log --oneline --all
+... fix(saison): resolution, nos tarifs et leurs horaires
+... feat(saison): ajustement de la saison
+... feat(saison): nouvelle saison
+... feat(saison): tarifs et horaires

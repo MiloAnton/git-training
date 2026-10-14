@@ -1,0 +1,12 @@
+$ ...
+Already on 'main'
+$ ...
+Merge made by the 'ort' strategy.
+ planning.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 planning.txt
+$ ...
+... Merge branch 'feature/planning'
+... feat(tarifs): tarif etudiant
+... feat(planning): creneau cardio
+... feat(tarifs): tarif annuel

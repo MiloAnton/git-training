@@ -1,0 +1,13 @@
+$ git branch -m brouillon feature/reparations
+$ git branch
+  essai
+  feature/reparations
+* main
+$ git branch -d essai
+error: the branch 'essai' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D essai'
+$ git branch -D essai
+Deleted branch essai (was ...).
+$ git branch
+  feature/reparations
+* main

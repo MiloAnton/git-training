@@ -1,0 +1,22 @@
+$ git merge feature/mardi
+Auto-merging menu.txt
+CONFLICT (content): Merge conflict in menu.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   menu.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ cat menu.txt
+Lundi : gratin
+<<<<<<< HEAD
+Mardi : lasagnes
+=======
+Mardi : poisson pane
+>>>>>>> feature/mardi

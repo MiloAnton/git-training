@@ -1,0 +1,47 @@
+$ ...
+Auto-merging accueil.txt
+CONFLICT (content): Merge conflict in accueil.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ ...
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   accueil.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ ...
+accueil.txt
+$ ...
+<<<<<<< HEAD
+Slogan : ensemble, plus forts depuis 1998
+=======
+Slogan : agir ensemble
+>>>>>>> feature/refonte
+Contact : contact@asso.fr
+$ ...
+... feat(accueil): slogan avec la date
+... feat(accueil): nouveau slogan
+... feat(accueil): page d'accueil
+$ ...
+$ ...
+$ ...
+[main ...] fix(accueil): resolution du conflit, on garde le slogan actuel
+$ ...
+On branch main
+nothing to commit, working tree clean
+$ ...
+... fix(accueil): resolution du conflit, on garde le slogan actuel
+... feat(accueil): slogan avec la date
+... feat(accueil): nouveau slogan
+... feat(accueil): page d'accueil
+$ ...
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:13:00 2026 +0100
+
+    fix(accueil): resolution du conflit, on garde le slogan actuel

@@ -1,0 +1,15 @@
+$ ...
+  feature/concert  ... feat(concert): lieu et horaire
+  feature/costumes ... feat(costumes): choix des tuniques
+* main             ... feat(repertoire): ajout du cantique
+$ ...
+... feat(repertoire): ajout du cantique
+... feat(costumes): choix des tuniques
+... feat(concert): lieu et horaire
+... feat(repertoire): premier chant
+$ ...
+Switched to branch 'feature/concert'
+$ ...
+* feature/concert  ... feat(concert): lieu et horaire
+  feature/costumes ... feat(costumes): choix des tuniques
+  main             ... feat(repertoire): ajout du cantique

@@ -1,0 +1,15 @@
+$ git branch -v
+  feature/concert  ... feat(concert): lieu et horaire
+  feature/costumes ... feat(costumes): choix des tuniques
+* main             ... feat(repertoire): ajout du cantique
+$ git log --oneline --all
+... feat(repertoire): ajout du cantique
+... feat(costumes): choix des tuniques
+... feat(concert): lieu et horaire
+... feat(repertoire): premier chant
+$ git switch feature/concert
+Switched to branch 'feature/concert'
+$ git branch -v
+* feature/concert  ... feat(concert): lieu et horaire
+  feature/costumes ... feat(costumes): choix des tuniques
+  main             ... feat(repertoire): ajout du cantique

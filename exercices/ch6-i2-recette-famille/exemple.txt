@@ -1,0 +1,23 @@
+$ git merge feature/cuisson
+Auto-merging tarte.txt
+CONFLICT (content): Merge conflict in tarte.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ cat tarte.txt
+Pate brisee
+<<<<<<< HEAD
+Pommes golden
+Cuisson : 45 min a 170 degres
+=======
+Pommes
+Cuisson : 35 min a 180 degres
+>>>>>>> feature/cuisson
+Servir tiede
+$ git restore --theirs -- tarte.txt
+$ git add tarte.txt
+$ git commit -m "fix(tarte): resolution sur le temps de cuisson"
+[main ...] fix(tarte): resolution sur le temps de cuisson
+$ cat tarte.txt
+Pate brisee
+Pommes
+Cuisson : 35 min a 180 degres
+Servir tiede

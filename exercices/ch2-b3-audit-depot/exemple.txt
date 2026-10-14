@@ -1,0 +1,56 @@
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   guide.txt
+$ printf "Version 2.1\nDate : 5 janvier\n" > version.txt
+$ printf "correction du calcul de TVA\n" > notes-internes.txt
+$ git add version.txt
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   guide.txt
+	modified:   version.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes-internes.txt
+$ git diff
+$ git diff --staged
+diff --git a/guide.txt b/guide.txt
+index ... 100644
+--- a/guide.txt
++++ b/guide.txt
+@@ -1 +1,2 @@
+ Guide d'installation
++Etape 1 : telecharger
+diff --git a/version.txt b/version.txt
+index ... 100644
+--- a/version.txt
++++ b/version.txt
+@@ -1,2 +1,2 @@
+-Version 2.0
+-Date : 1 janvier
++Version 2.1
++Date : 5 janvier
+$ git diff HEAD
+diff --git a/guide.txt b/guide.txt
+index ... 100644
+--- a/guide.txt
++++ b/guide.txt
+@@ -1 +1,2 @@
+ Guide d'installation
++Etape 1 : telecharger
+diff --git a/version.txt b/version.txt
+index ... 100644
+--- a/version.txt
++++ b/version.txt
+@@ -1,2 +1,2 @@
+-Version 2.0
+-Date : 1 janvier
++Version 2.1
++Date : 5 janvier
+$ git diff HEAD --name-only
+guide.txt
+version.txt

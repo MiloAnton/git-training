@@ -1,0 +1,41 @@
+$ ...
+Already on 'main'
+$ ...
+ semis.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+$ ...
+Updating ...
+Fast-forward
+Squash commit -- not updating HEAD
+ semis.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 semis.txt
+$ ...
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   semis.txt
+$ ...
+[main ...] feat(semis): calendrier complet des semis
+ 1 file changed, 5 insertions(+)
+ create mode 100644 semis.txt
+$ ...
+... feat(semis): calendrier complet des semis
+... wip 5
+... wip 4
+... wip 3
+... wip 2
+... wip 1
+... feat(presentation): la serre
+$ ...
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:41:00 2026 +0100
+
+    feat(semis): calendrier complet des semis
+
+ semis.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+$ ...
+  feature/semis
+* main

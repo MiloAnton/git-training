@@ -1,0 +1,25 @@
+$ git switch main
+Already on 'main'
+$ git merge feature/burger
+Updating ...
+Fast-forward
+ burger.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 burger.txt
+$ git merge feature/dessert
+Merge made by the 'ort' strategy.
+ dessert.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dessert.txt
+$ git merge feature/boissons
+Merge made by the 'ort' strategy.
+ boissons.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 boissons.txt
+$ git log --oneline --all
+... Merge branch 'feature/boissons'
+... Merge branch 'feature/dessert'
+... feat(boissons): limonade
+... feat(dessert): tarte citron
+... feat(burger): burger du jour
+... feat(carte): ouverture

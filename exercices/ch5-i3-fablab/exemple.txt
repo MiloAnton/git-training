@@ -1,0 +1,19 @@
+$ git log --oneline
+... feat(fraiseuse): nouvelle fraiseuse
+... feat(machines): decoupe laser
+... feat(machines): imprimante 3D
+$ git revert HEAD~1 --no-edit
+[main ...] Revert "feat(machines): decoupe laser"
+ Date: Mon Jan 5 10:24:00 2026 +0100
+ 1 file changed, 1 deletion(-)
+$ git commit --amend -m "fix(machines): annulation de la ligne du laser"
+[main ...] fix(machines): annulation de la ligne du laser
+ Date: Mon Jan 5 10:24:00 2026 +0100
+ 1 file changed, 1 deletion(-)
+$ git log --oneline
+... fix(machines): annulation de la ligne du laser
+... feat(fraiseuse): nouvelle fraiseuse
+... feat(machines): decoupe laser
+... feat(machines): imprimante 3D
+$ cat machines.txt
+Imprimante 3D : 1

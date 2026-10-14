@@ -1,0 +1,23 @@
+$ ...
+Auto-merging tarte.txt
+CONFLICT (content): Merge conflict in tarte.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ ...
+Pate brisee
+<<<<<<< HEAD
+Pommes golden
+Cuisson : 45 min a 170 degres
+=======
+Pommes
+Cuisson : 35 min a 180 degres
+>>>>>>> feature/cuisson
+Servir tiede
+$ ...
+$ ...
+$ ...
+[main ...] fix(tarte): resolution sur le temps de cuisson
+$ ...
+Pate brisee
+Pommes
+Cuisson : 35 min a 180 degres
+Servir tiede

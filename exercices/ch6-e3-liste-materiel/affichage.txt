@@ -1,0 +1,16 @@
+$ ...
+Projecteur
+<<<<<<< HEAD
+Sono : modele B
+=======
+Sono : modele A
+>>>>>>> feature/sono
+$ ...
+$ ...
+Projecteur
+Sono : modele B
+$ ...
+$ ...
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)

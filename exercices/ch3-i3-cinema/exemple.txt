@@ -1,0 +1,24 @@
+$ printf "Lundi : Les Temps modernes\nMardi : Le Cuirasse Potemkine\n" > programme.txt
+$ git switch main
+error: Your local changes to the following files would be overwritten by checkout:
+	programme.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+$ git stash
+Saved working directory and index state WIP on feature/programme: ... feat(programme): cycle Chaplin
+$ git switch main
+Switched to branch 'main'
+$ git switch feature/programme
+Switched to branch 'feature/programme'
+$ git stash pop
+On branch feature/programme
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   programme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ cat programme.txt
+Lundi : Les Temps modernes
+Mardi : Le Cuirasse Potemkine

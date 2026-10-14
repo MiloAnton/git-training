@@ -1,0 +1,43 @@
+$ ...
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ ...
+To https://github.com/leonis-formation/depot-club.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/leonis-formation/depot-club.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+$ ...
+From https://github.com/leonis-formation/depot-club.git
+   ...  main       -> origin/main
+Rebasing (1/1)
+
+                                                                                
+Successfully rebased and updated refs/heads/main.
+$ ...
+... feat(cotisation): montant annuel
+... feat(sorties): sortie du dimanche
+... feat(presentation): le club
+$ ...
+To https://github.com/leonis-formation/depot-club.git
+   ...  main -> main
+$ ...
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+$ ...
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:20:00 2026 +0100
+
+    feat(cotisation): montant annuel
+
+ cotisation.txt | 1 +
+ 1 file changed, 1 insertion(+)

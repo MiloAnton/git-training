@@ -1,0 +1,24 @@
+$ ...
+Already on 'main'
+$ ...
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint: 
+hint: 	git merge --no-ff
+hint: 
+hint: or:
+hint: 
+hint: 	git rebase
+hint: 
+hint: Disable this message with "git config advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+$ ...
+Updating ...
+Fast-forward
+ affiche.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 affiche.txt
+$ ...
+... fix(affiche): format et couleur
+... feat(presentation): ajout des dates
+... feat(chalets): nombre de chalets
+... feat(presentation): le marche

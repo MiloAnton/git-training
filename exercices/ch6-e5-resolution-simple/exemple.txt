@@ -1,0 +1,15 @@
+$ cat couleurs.txt
+<<<<<<< HEAD
+Couleur principale : bleu
+=======
+Couleur principale : vert
+>>>>>>> feature/charte
+$ git restore --theirs -- couleurs.txt
+$ git add couleurs.txt
+$ git commit -m "fix(couleurs): resolution du conflit, on garde le vert"
+[main ...] fix(couleurs): resolution du conflit, on garde le vert
+$ git log --oneline --all
+... fix(couleurs): resolution du conflit, on garde le vert
+... feat(couleurs): le bleu
+... feat(couleurs): le vert
+... feat(couleurs): charte a definir

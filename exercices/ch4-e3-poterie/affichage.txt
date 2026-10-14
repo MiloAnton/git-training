@@ -1,0 +1,12 @@
+$ ...
+Already on 'main'
+$ ...
+Merge made by the 'ort' strategy.
+ four.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 four.txt
+$ ...
+... Merge branch 'feature/four'
+... feat(four): procedure d'emaillage
+... feat(four): fiche du four
+... feat(atelier): presentation

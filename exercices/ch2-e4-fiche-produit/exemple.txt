@@ -1,0 +1,36 @@
+$ printf "Cafetiere italienne\nPrix : 29 euros\n" > fiche.txt
+$ printf "Capacite : 6 tasses\nMatiere : aluminium\n" > description.txt
+$ git add fiche.txt
+$ git diff
+diff --git a/description.txt b/description.txt
+index ... 100644
+--- a/description.txt
++++ b/description.txt
+@@ -1 +1,2 @@
+ Capacite : 6 tasses
++Matiere : aluminium
+$ git diff --staged
+diff --git a/fiche.txt b/fiche.txt
+index ... 100644
+--- a/fiche.txt
++++ b/fiche.txt
+@@ -1,2 +1,2 @@
+ Cafetiere italienne
+-Prix : 24 euros
++Prix : 29 euros
+$ git diff HEAD
+diff --git a/description.txt b/description.txt
+index ... 100644
+--- a/description.txt
++++ b/description.txt
+@@ -1 +1,2 @@
+ Capacite : 6 tasses
++Matiere : aluminium
+diff --git a/fiche.txt b/fiche.txt
+index ... 100644
+--- a/fiche.txt
++++ b/fiche.txt
+@@ -1,2 +1,2 @@
+ Cafetiere italienne
+-Prix : 24 euros
++Prix : 29 euros

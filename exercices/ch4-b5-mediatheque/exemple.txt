@@ -1,0 +1,87 @@
+$ git switch -c feature/numerique
+Switched to a new branch 'feature/numerique'
+$ printf "Postes informatiques : 8\n" > numerique.txt
+$ git add numerique.txt
+$ git commit -m "feat(numerique): postes informatiques"
+[feature/numerique ...] feat(numerique): postes informatiques
+ 1 file changed, 1 insertion(+)
+ create mode 100644 numerique.txt
+$ printf "Postes informatiques : 8\nPret de liseuses : 20\n" > numerique.txt
+$ git commit -am "feat(numerique): pret de liseuses"
+[feature/numerique ...] feat(numerique): pret de liseuses
+ 1 file changed, 1 insertion(+)
+$ git switch main
+Switched to branch 'main'
+$ printf "Ouvert mardi, jeudi, samedi\n" > horaires.txt
+$ git add horaires.txt
+$ git commit -m "feat(horaires): jours d'ouverture"
+[main ...] feat(horaires): jours d'ouverture
+ 1 file changed, 1 insertion(+)
+ create mode 100644 horaires.txt
+$ git switch -c fix/affichage
+Switched to a new branch 'fix/affichage'
+$ printf "Affichage : panneau a l'entree\n" > affichage.txt
+$ git add affichage.txt
+$ git commit -m "fix(affichage): panneau d'entree"
+[fix/affichage ...] fix(affichage): panneau d'entree
+ 1 file changed, 1 insertion(+)
+ create mode 100644 affichage.txt
+$ git switch main
+Switched to branch 'main'
+$ git merge --ff-only fix/affichage
+Updating ...
+Fast-forward
+ affichage.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 affichage.txt
+$ git merge --no-ff feature/numerique
+Merge made by the 'ort' strategy.
+ numerique.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 numerique.txt
+$ git branch -d fix/affichage
+Deleted branch fix/affichage (was ...).
+$ git branch -d feature/numerique
+Deleted branch feature/numerique (was ...).
+$ git branch
+* main
+$ git log --oneline --all
+... Merge branch 'feature/numerique'
+... fix(affichage): panneau d'entree
+... feat(horaires): jours d'ouverture
+... feat(numerique): pret de liseuses
+... feat(numerique): postes informatiques
+... feat(presentation): la mediatheque
+$ git show HEAD --stat
+commit ...
+Merge: ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:34:00 2026 +0100
+
+    Merge branch 'feature/numerique'
+
+ numerique.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+$ git diff HEAD~3 HEAD
+diff --git a/affichage.txt b/affichage.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/affichage.txt
+@@ -0,0 +1 @@
++Affichage : panneau a l'entree
+diff --git a/horaires.txt b/horaires.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/horaires.txt
+@@ -0,0 +1 @@
++Ouvert mardi, jeudi, samedi
+diff --git a/numerique.txt b/numerique.txt
+new file mode 100644
+index ...
+--- /dev/null
++++ b/numerique.txt
+@@ -0,0 +1,2 @@
++Postes informatiques : 8
++Pret de liseuses : 20

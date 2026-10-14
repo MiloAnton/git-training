@@ -1,0 +1,38 @@
+$ printf "Emplacement 1 : ombrage\nEmplacement 2 : plein soleil\n" > carte.txt
+$ printf "penser a racheter des piquets\n" > notes-perso.txt
+$ git stash -u
+Saved working directory and index state WIP on feature/emplacements: ... feat(carte): premier emplacement
+$ git switch main
+Switched to branch 'main'
+$ printf "Silence a partir de 22h\n" > reglement.txt
+$ git add reglement.txt
+$ git commit -m "feat(reglement): horaires de silence"
+[main ...] feat(reglement): horaires de silence
+ 1 file changed, 1 insertion(+)
+ create mode 100644 reglement.txt
+$ git switch feature/emplacements
+Switched to branch 'feature/emplacements'
+$ git stash pop
+On branch feature/emplacements
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   carte.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes-perso.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (...)
+$ git add carte.txt
+$ git commit -m "feat(carte): ajout du second emplacement"
+[feature/emplacements ...] feat(carte): ajout du second emplacement
+ 1 file changed, 1 insertion(+)
+$ git status
+On branch feature/emplacements
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes-perso.txt
+
+nothing added to commit but untracked files present (use "git add" to track)

@@ -1,0 +1,46 @@
+$ git commit --amend -m "feat(stands): ajout du stand des livres"
+[main ...] feat(stands): ajout du stand des livres
+ Date: Mon Jan 5 10:45:00 2026 +0100
+ 2 files changed, 2 insertions(+)
+ create mode 100644 brouillon.txt
+$ git log --oneline
+... feat(stands): ajout du stand des livres
+... feat(stands): stand buvette
+... feat(tarifs): emplacement couvert
+... feat(tarifs): prix de l'emplacement
+... feat(presentation): la brocante
+$ git restore tarifs.txt
+$ git restore --staged brouillon.txt
+$ git status
+On branch main
+nothing to commit, working tree clean
+$ git revert HEAD~2 --no-edit
+[main ...] Revert "feat(tarifs): emplacement couvert"
+ Date: Mon Jan 5 11:48:00 2026 +0100
+ 1 file changed, 1 deletion(-)
+$ git show HEAD --stat
+commit ...
+Author: Eleve Leonis <eleve@leonis.fr>
+Date:   Mon Jan 5 11:48:00 2026 +0100
+
+    Revert "feat(tarifs): emplacement couvert"
+    
+    This reverts commit ....
+
+ tarifs.txt | 1 -
+ 1 file changed, 1 deletion(-)
+$ git log --oneline
+... Revert "feat(tarifs): emplacement couvert"
+... feat(stands): ajout du stand des livres
+... feat(stands): stand buvette
+... feat(tarifs): emplacement couvert
+... feat(tarifs): prix de l'emplacement
+... feat(presentation): la brocante
+$ git reflog
+... HEAD@{0}: revert: Revert "feat(tarifs): emplacement couvert"
+... HEAD@{1}: commit (amend): feat(stands): ajout du stand des livres
+... HEAD@{2}: commit: stands
+... HEAD@{3}: commit: feat(stands): stand buvette
+... HEAD@{4}: commit: feat(tarifs): emplacement couvert
+... HEAD@{5}: commit: feat(tarifs): prix de l'emplacement
+... HEAD@{6}: commit (initial): feat(presentation): la brocante

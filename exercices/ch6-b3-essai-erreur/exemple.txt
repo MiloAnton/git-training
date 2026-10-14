@@ -1,0 +1,26 @@
+$ git merge feature/affiche
+Auto-merging affiche.txt
+CONFLICT (content): Merge conflict in affiche.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git restore --ours -- affiche.txt
+$ git add affiche.txt
+$ git merge --abort
+$ git status
+On branch main
+nothing to commit, working tree clean
+$ git merge feature/affiche
+Auto-merging affiche.txt
+CONFLICT (content): Merge conflict in affiche.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git restore --theirs -- affiche.txt
+$ git add affiche.txt
+$ git commit -m "fix(affiche): resolution, on garde leur visuel"
+[main ...] fix(affiche): resolution, on garde leur visuel
+$ cat affiche.txt
+Visuel : photo noir et blanc
+Format : A2
+$ git log --oneline --all
+... fix(affiche): resolution, on garde leur visuel
+... feat(affiche): illustration coloree
+... feat(affiche): photo noir et blanc
+... feat(affiche): cahier des charges

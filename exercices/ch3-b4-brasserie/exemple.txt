@@ -1,0 +1,47 @@
+$ git switch -c feature/blonde
+Switched to a new branch 'feature/blonde'
+$ printf "Blonde : malt pale, houblon Saaz\n" > blonde.txt
+$ git add blonde.txt
+$ git commit -m "feat(blonde): recette de la blonde"
+[feature/blonde ...] feat(blonde): recette de la blonde
+ 1 file changed, 1 insertion(+)
+ create mode 100644 blonde.txt
+$ git switch main
+Switched to branch 'main'
+$ git switch -c feature/ambree
+Switched to a new branch 'feature/ambree'
+$ printf "Ambree : malt caramel\n" > ambree.txt
+$ git add ambree.txt
+$ git commit -m "feat(ambree): recette de l'ambree"
+[feature/ambree ...] feat(ambree): recette de l'ambree
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ambree.txt
+$ git switch main
+Switched to branch 'main'
+$ git switch -c feature/brune
+Switched to a new branch 'feature/brune'
+$ printf "Brune : malt torrefie\n" > brune.txt
+$ git add brune.txt
+$ git commit -m "feat(brune): recette de la brune"
+[feature/brune ...] feat(brune): recette de la brune
+ 1 file changed, 1 insertion(+)
+ create mode 100644 brune.txt
+$ git switch main
+Switched to branch 'main'
+$ printf "Etiquettes rondes, papier kraft\n" > etiquettes.txt
+$ git add etiquettes.txt
+$ git commit -m "feat(etiquettes): choix du support"
+[main ...] feat(etiquettes): choix du support
+ 1 file changed, 1 insertion(+)
+ create mode 100644 etiquettes.txt
+$ git branch -v
+  feature/ambree ... feat(ambree): recette de l'ambree
+  feature/blonde ... feat(blonde): recette de la blonde
+  feature/brune  ... feat(brune): recette de la brune
+* main           ... feat(etiquettes): choix du support
+$ git log --oneline --all
+... feat(etiquettes): choix du support
+... feat(brune): recette de la brune
+... feat(ambree): recette de l'ambree
+... feat(blonde): recette de la blonde
+... feat(presentation): la brasserie

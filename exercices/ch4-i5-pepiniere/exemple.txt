@@ -1,0 +1,24 @@
+$ git switch main
+Already on 'main'
+$ git merge --no-ff feature/semis
+Merge made by the 'ort' strategy.
+ semis.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 semis.txt
+$ git merge --no-ff feature/greffes
+Merge made by the 'ort' strategy.
+ greffes.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greffes.txt
+$ git branch -d feature/semis
+Deleted branch feature/semis (was ...).
+$ git branch -d feature/greffes
+Deleted branch feature/greffes (was ...).
+$ git branch
+* main
+$ git log --oneline --all
+... Merge branch 'feature/greffes'
+... Merge branch 'feature/semis'
+... feat(greffes): calendrier des greffes
+... feat(semis): calendrier des semis
+... feat(presentation): la pepiniere
